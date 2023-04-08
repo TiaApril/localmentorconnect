@@ -1,10 +1,12 @@
+import Demo from './pages/Demo';
 import LandingPage from './pages/LandingPage';
 
 
 function App() {
   return (
     <>
-      <LandingPage/>
+      <Demo/>
+      {/* <LandingPage/> */}
     </>
   );
 }

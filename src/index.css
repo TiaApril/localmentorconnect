@@ -1,6 +1,273 @@
+:root{
+  --greenbar: #0CBCA1;
+  --bluebar: #1674ef;
+
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Andada Pro", sans-serif;
 }
 
+/* landing page */
+/* navbar */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.navbarbutton{
+  display: flex;
+}
+
+.navbarbutton button{
+  padding: 7px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  
+}
+
+.navbarbuttoncolor{
+  background-color: var(--greenbar);
+}
+
+/* hero */
+.hero{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./pictures/hero-picture.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  color: white;
+}
+
+.herocontainer{
+  color: white;
+  text-align: center;
+  padding-top: 230px;
+}
+
+.herocontainer h1{
+  padding-bottom: 20px;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.herocontainer p{
+  font-size: 40px;
+  font-weight: 100;
+}
+
+
+.signupcontainers{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+.signupcontainer{
+  background-color: var(--greenbar);
+  height: 25vh;
+  width: 25em;
+  padding: 30px;
+  margin: 50px;
+  border-radius: 10%;
+}
+
+.signupcontainer{
+  text-align: center;
+}
+
+.signupcontainer h1{
+  padding-bottom: 20px;
+}
+
+.signupcontainer button{
+  margin-top: 50px;
+  padding: 20px 40px;
+  border: none;
+  background-color: var(--bluebar);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Demo */
+.demonavbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.demonavbarmenu{
+  margin-right: 70px;
+}
+
+.demonavbarmenu a{
+  padding: 7px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.mylearningschedule{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.demoschedulecontainer{
+  background-color: var(--greenbar);
+  margin: 20px;
+  padding: 20px;
+}
+
+.demoschedulecontainer h2{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.demoschedule{
+  display: flex;
+}
+
+.demoschedulecontainer div:nth-child(2n){
+  background-color: var(--bluebar);
+  color: white;
+}
+
+.demoschedule p{
+  padding: 20px 40px;
+}
+
+
+/* suggested course */
+.suggestedcourse{
+  text-align: center;
+  padding: 20px;
+  
+}
+
+
+.suggestedcoursecontainers{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.suggestedcoursecontainer{
+  margin: 20px;
+  width: 400px;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.suggestedcoursecontainer h1{
+  color: white;
+  padding-top: 40px;
+}
+
+.suggestedcoursecontainer p{
+  color: white;
+  padding-top: 10px;
+}
+
+.suggestedcourse button {
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: var(--bluebar);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* suggested mentor */
+.suggestedmentor{
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 20px;
+}
+
+.suggestedmentorcontainers{
+  display: flex;
+  padding: 20px;
+}
+
+
+.suggestedmentorcontainer{
+  width: 100%;
+  max-width: 400px;
+  margin: 2em auto;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+.suggestedmentorpicturecard{
+  position: relative;
+  display: block;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.suggestedmentorpicturecard img{
+  width: 100%;
+  height: auto;
+    border-radius: 15px;
+    display: block;
+}
+
+.suggestedmentorcardcontent{
+  padding: 20px;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.suggestedmentorcardattribute{
+    padding: 1em;
+    border-top: 2px solid darkgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.suggestedmentorcardattribute button{
+  background-color: var(--greenbar);
+  border: none;
+  padding: 5px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.suggestedmentorbutton{
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: var(--bluebar);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
