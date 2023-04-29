@@ -35,6 +35,45 @@
   background-color: var(--greenbar);
 }
 
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  color: var(--bluebar);
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
 /* hero */
 .hero{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./pictures/hero-picture.jpg");
@@ -108,8 +147,10 @@
   padding: 20px;
 }
 
+
 .demonavbarmenu{
   margin-right: 70px;
+  color: black;
 }
 
 .demonavbarmenu a{
@@ -206,6 +247,7 @@
 
 .suggestedmentorcontainers{
   display: flex;
+  justify-content: space-between;
   padding: 20px;
 }
 
@@ -230,9 +272,11 @@
 
 .suggestedmentorpicturecard img{
   width: 100%;
-  height: auto;
+  height: 400px;
+  overflow: hidden;
     border-radius: 15px;
     display: block;
+    object-fit: cover;
 }
 
 .suggestedmentorcardcontent{
@@ -270,4 +314,260 @@
   color: white;
   border: none;
   cursor: pointer;
+}
+
+/* CourseFilter */
+.filtercontainer{
+  background-color: whitesmoke;
+  padding: 20px;
+  width: 25em;
+}
+
+.container{
+  padding-top: 20px;
+}
+
+.filtercontainer button{
+  margin-top: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* CourseContainer */
+.coursecontainer{
+  display: flex;
+  flex-direction: row;
+}
+.card {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.5);
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  position: relative;
+  margin: 10px;
+}
+.card h2 {
+  margin: 0;
+  padding: 0 1rem;
+}
+.card .title {
+  padding: 1rem;
+  text-align: right;
+ color: var(--bluebar);
+  font-weight: bold;
+  font-size: 12px;
+}
+.card .desc {
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+}
+.card .actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.img-avatar {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+  background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+  top: 15px;
+  left: 85px;
+}
+
+.img-avatar img{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+  border: 6px solid white;
+  object-fit: cover;
+
+}
+
+.card-text {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.title-total {
+  padding: 2.5em 1.5em 1.5em 1.5em;
+}
+
+path {
+  fill: white;
+}
+
+.img-portada {
+  width: 100%;
+}
+
+.portada {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+button {
+  border: none;
+  background: var(--greenbar);
+  padding: 5px 3px;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition:.5s;
+  /* &:hover{
+    color: #4CAF50  ;
+    transform: rotate(22deg)
+  } */
+}
+
+.coursesearchcontainer{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.courseresultcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+/* signinpage */
+.signincontainer{
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  border: 2px;
+  width: 300px;
+  height: 350px;
+  background-color: whitesmoke;
+
+}
+
+.signincontainer h1{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.usersignupcontainer{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.usersignupcontainer input{
+  size: 5px;
+}
+.usersignupcontainer label{
+  padding-top: 10px;
+}
+
+.usersignupcontainer button {
+  margin-top: 10px;
+}
+
+.usersignupcontainer a{
+  text-decoration-line: none;
+  color: black;
+  font-size: 12px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.signupfooter{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logninpage */
+.logincontainer{
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  border: 2px;
+  width: 300px;
+  height: 350px;
+  background-color: whitesmoke;
+
+}
+
+.logincontainer h1{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.userlogincontainer{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.userlogincontainer input{
+  size: 5px;
+}
+.userlogincontainer label{
+  padding-top: 10px;
+}
+
+.userlogincontainer button {
+  margin-top: 10px;
+}
+
+.userlogincontainer a{
+  text-decoration-line: none;
+  color: black;
+  font-size: 12px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.loginfooter{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* mentordashboard */
+
+.mentordashboardcontainer{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* mentor search */
+.mentorssearchcontainer{
+  display: flex;
+}
+
+.mentorssearch{
+background-color: whitesmoke;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+padding: 5px;
+margin: 10px;
 }

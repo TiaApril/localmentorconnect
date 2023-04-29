@@ -1,5 +1,6 @@
 import React from 'react'
 import heropicture from '../pictures/hero-picture.jpg';
+import { Link } from 'react-router-dom';
 
 function LandingPage() {
   return (
@@ -9,9 +10,16 @@ function LandingPage() {
                 <h3>LocalMentorConnect</h3>
             </div>
             <div className="navbarbutton">
+                <Link to='/login'>
                 <button className='navbarbuttoncolor'>Log In</button>
-                <button>Sign In</button>
-                <button>Demo</button>
+                </Link>
+                <Link to='/signin'>
+                <button className='navbarbuttoncolor'>Sign Up</button>
+                </Link>
+                <Link to='/demo'>
+                  <button>Demo</button>
+                </Link>
+                
             </div>
         </div>
         <div className="hero">
